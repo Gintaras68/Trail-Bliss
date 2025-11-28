@@ -1,3 +1,16 @@
 .logo {
-    font-size: 32px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: transform 0.2s ease-in;
+
+  span {
+    font-weight: 500;
+    font-size: 18px;
+    color: var(--black);
+  }
+
+  &:hover {
+    transform: scale(1.1);
+  }
 }

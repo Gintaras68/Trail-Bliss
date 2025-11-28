@@ -1,17 +1,45 @@
 <header class="header">
-    <div class="container">
-        <div class="header__row">
-            <div class="logo">ВебКадеми</div>
-            <nav class="header__nav nav">
-                <ul class="nav__list">
-                    <li><a href="index.html" class="active">Главная</a></li>
-		            <li><a href="docs.html">Документация</a></li>
-                </ul>
-            </nav>
-            <button class="mobile-nav-btn">
-                <div class="nav-icon"></div>
-            </button>
-        </div>
-    </div>
+  <div class="container">
+    <nav class="header__row">
+      <ul class="header-list">
+        <li>
+          <a href="#!" class="header-list__link">Home</a>
+        </li>
+        <li>
+          <a href="#!" class="header-list__link">Pricing</a>
+        </li>
+        <li>
+          <a href="#!" class="header-list__link">Blog</a>
+        </li>
+      </ul>
+
+      <div class="logo">
+        <span>
+          <img src="./../../img/leaf.svg" alt="" />
+        </span>
+        <span>
+          Trail Bliss
+        </span>
+      </div>
+
+      <ul class="header-list">
+        <li>
+          <a href="#!" class="header-list__link">Testimonial</a>
+        </li>
+        <li>
+          <a href="#!" class="header-list__link">FAQ</a>
+        </li>
+        <li>
+          <button class="header-list__btn btn">Contact Us</button>
+        </li>
+      </ul>
+
+      <div class="header__mobile-btn">
+        <button class="mobile-nav-btn">
+          <div class="nav-icon"></div>
+        </button>
+      </div>
+    </nav>
+  </div>
 </header>
 @@include('mobile-nav.html')
