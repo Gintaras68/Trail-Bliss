@@ -1,24 +1,30 @@
 .btn {
-  border: 1px solid var(--black);
-  border-radius: 100px;
-  padding: 8px 14px;
-  // height: 41px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 10px;
+
+  padding: 17px 21px;
+  height: 61px;
+  width: fit-content;
 
   font-family: var(--font-family);
   font-weight: 500;
   font-size: 18px;
+  line-height: 1;
   color: var(--black);
   transition: all 0.2s ease-in;
+  border-radius: 100px;
+  border: 1px solid var(--black);
 
   // Iš header ...
   &:hover {
-    color: var(--link-color);
     border-color: var(--link-color);
     box-shadow: 2px 2px 14px rgb(109, 205, 243);
   }
 
   @include tablet {
-    padding: 6px 12px;
+    padding: 14px;
     font-size: 16px;
   }
 }

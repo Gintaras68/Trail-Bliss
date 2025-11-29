@@ -59,6 +59,11 @@
   }
 
   &__btn {
+    border: 1px solid var(--black);
+    padding: 10px;
+    width: 124px;
+    height: 41px;
+
     &:hover {
       color: var(--link-color);
       border-color: var(--link-color);
