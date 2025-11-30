@@ -1,0 +1,149 @@
+.feature-card {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  background: var(--sky);
+
+  &__image {
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0) 79%,
+        rgba(0, 0, 0, 0.6) 100%
+      );
+
+      // background-color: red;
+    }
+  }
+
+  &__content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @include mobile {
+      gap: 12px;
+    }
+  }
+
+  &__title {
+    @include mobile {
+      text-align: center;
+    }
+  }
+
+  &__descr {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.4;
+    color: var(--gray-dark);
+
+    @include mobile {
+      font-size: 14px;
+      text-align: center;
+    }
+  }
+
+  &__video {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__link img {
+    transition: all 0.2s ease-in;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  &--col-2 {
+    grid-column: span 2;
+    display: flex; // <-- kad vaizdo blokas išsitemptų
+    height: 220px;
+
+    img {
+      height: 100%;
+      max-width: none;
+      @include mobile {
+        width: 100%;
+      }
+    }
+
+    @include tablet {
+      order: 2;
+      grid-column: span 4;
+      height: auto;
+    }
+
+    @include mobile {
+      order: 1;
+      display: block;
+    }
+  }
+
+  &--col-3 {
+    grid-column: span 3;
+
+    @include tablet {
+      order: 3;
+      grid-column: span 6;
+    }
+
+    @include mobile {
+      order: 1;
+    }
+  }
+
+  &--col-4 {
+    grid-column: span 4;
+
+    @include tablet {
+      order: 1;
+      grid-column: span 8;
+    }
+  }
+
+  &--pic-hor,
+  &--pic-ver {
+    .feature-card__image img {
+      width: 100%;
+    }
+    .feature-card__content {
+      position: absolute;
+      inset: 0;
+      justify-content: space-between;
+    }
+
+    .feature-card__title {
+      color: var(--white);
+    }
+  }
+
+  &--pic-hor {
+    .feature-card__content {
+      flex-direction: row;
+      align-items: end;
+    }
+  }
+
+  &--pic-ver {
+    .feature-card__image {
+      &::after {
+        background: linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 0.6) 0%,
+          rgba(0, 0, 0, 0) 35.7%
+        );
+      }
+    }
+  }
+}
