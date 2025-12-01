@@ -1,4 +1,4 @@
 node_modules
 .webp
-build
+build/
 .DS_Store
