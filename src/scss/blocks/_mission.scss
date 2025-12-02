@@ -41,7 +41,7 @@
   }
 
   &__picture {
-    grid-column: 8 / -1;
+    grid-column: span 5 / -1;
     border-radius: 16px;
     overflow: hidden;
 
@@ -50,6 +50,10 @@
       width: 100%;
       object-fit: cover;
       object-position: top;
+    }
+
+    &--center img {
+      object-position: center;
     }
 
     @include tablet {
@@ -61,6 +65,24 @@
         height: clamp(17.5rem, 7.857rem + 34.29vw, 25rem);
         object-position: 20% center;
       }
+    }
+  }
+
+  &--mirror {
+    .mission__grid {
+      flex-direction: column;
+    }
+
+    .mission__picture {
+      grid-column: span 5;
+
+      @include tablet {
+        grid-column: span 6;
+      }
+    }
+
+    .mission__info {
+      grid-column: span 6 / -1;
     }
   }
 }
