@@ -1,0 +1,25 @@
+<section class="offers">
+  <div class="container-full">
+    <div class="offers__header">
+      <h2 class="offers__title title-2">
+        Unforgettable Moments with Unique Events
+      </h2>
+      <div class="offers__controls">
+        <button class="offers__btn btn btn--prev">
+          <svg class="icon icon--left-sign">
+            <use href="./img/svgsprite/sprite.symbol.svg#left-sign"></use>
+          </svg>
+        </button>
+        <button class="offers__btn btn btn--next">
+          <svg class="icon icon--right-sign">
+            <use href="./img/svgsprite/sprite.symbol.svg#right-sign"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <!-- carts -->
+    <div class="offers__cards">
+      @@loop('components/offer-card.html', './../data/offer-cards.json')
+    </div>
+  </div>
+</section>

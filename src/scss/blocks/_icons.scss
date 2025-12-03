@@ -40,5 +40,10 @@
 // }
 
 .icon--right-arrow {
-  stroke: var(--white);
+  stroke: currentColor;
+}
+
+.icon--left-sign,
+.icon--right-sign {
+  fill: currentColor;
 }

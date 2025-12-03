@@ -68,13 +68,14 @@
     }
   }
 
-  &--mirror {
+  &--reverse {
     .mission__grid {
       flex-direction: column;
     }
 
     .mission__picture {
       grid-column: span 5;
+      order: -1;
 
       @include tablet {
         grid-column: span 6;
