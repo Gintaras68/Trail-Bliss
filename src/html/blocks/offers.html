@@ -5,21 +5,28 @@
         Unforgettable Moments with Unique Events
       </h2>
       <div class="offers__controls">
-        <button class="offers__btn btn btn--prev">
+        <button class="offers__btn btn btn--prev" id="offers-btn-prev">
           <svg class="icon icon--left-sign">
             <use href="./img/svgsprite/sprite.symbol.svg#left-sign"></use>
           </svg>
         </button>
-        <button class="offers__btn btn btn--next">
+        <button class="offers__btn btn btn--next" id="offers-btn-next">
           <svg class="icon icon--right-sign">
             <use href="./img/svgsprite/sprite.symbol.svg#right-sign"></use>
           </svg>
         </button>
       </div>
     </div>
-    <!-- carts -->
+    <!-- cards -->
     <div class="offers__cards">
-      @@loop('components/offer-card.html', './../data/offer-cards.json')
+      <!-- ↓  Swiper  ↓ -->
+      <div class="swiper" id="offers-swiper">
+        <div class="swiper-wrapper">
+          @@loop('components/slide-offer-card.html',
+          './../data/offer-cards.json')
+        </div>
+      </div>
+      <!-- ↑  Swiper  ↑ -->
     </div>
   </div>
 </section>

@@ -2,12 +2,30 @@
   padding: 80px 0;
   background: var(--cream-lite);
 
+  @include tablet {
+    padding: 60px 0;
+  }
+
+  @include mobile {
+    padding: 40px 0;
+  }
+
   &__header {
-    margin-bottom: 52px;
+    margin-bottom: 42px; // -10px - plus 10px in swiper-wrapper for card's shadow
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 30px;
+
+    @include tablet {
+      margin-bottom: 30px;
+    }
+
+    @include mobile {
+      margin-bottom: 10px;
+      flex-direction: column;
+      gap: 20px;
+    }
   }
 
   &__title {
@@ -19,20 +37,20 @@
     gap: 10px;
   }
 
-  &__btn {
-  }
-
   &__cards {
-    padding: 10px;
-    margin: -10px;
-
-    display: flex;
-    gap: 24px;
-
-    overflow-y: auto;
+    margin: 0 calc(-1 * var(--container-padding));
   }
-}
 
-.offer-card {
-  flex-shrink: 0;
+  .swiper-wrapper {
+    padding: 10px 0;
+  }
+
+  .swiper-slide {
+    width: 700px;
+
+    @include mobile {
+      max-width: 700px;
+      width: calc(100% - (2 * var(--container-padding)));
+    }
+  }
 }

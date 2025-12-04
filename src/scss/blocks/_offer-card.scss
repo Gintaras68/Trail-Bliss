@@ -3,9 +3,12 @@
   border-radius: 16px;
   padding: 20px;
   // width: 700px;
-  // height: 600px;
   background: var(--white);
-  box-shadow: 0 0 10px 5px rgba(128, 128, 128, 0.3);
+  box-shadow: 0 0 10px 4px rgba(128, 128, 128, 0.2);
+
+  @include mobile {
+    width: unset;
+  }
 
   &__media {
     margin-bottom: 20px;
