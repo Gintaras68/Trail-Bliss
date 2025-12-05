@@ -1,0 +1,36 @@
+.card-review {
+  border-radius: 12px;
+  padding: 20px 30px;
+  padding-top: 60px;
+  width: 351px;
+  // height: 313px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 16px;
+  background: var(--white);
+  background-image: url('./../../img/quote.svg');
+  background-position: 30px 20px; /* x y */
+  background-size: auto;
+  background-repeat: no-repeat;
+
+  @include tablet {
+    width: 100%;
+  }
+
+  &__profile {
+    display: flex;
+    gap: 12px;
+  }
+
+  &__image {
+    display: inline-block;
+    overflow: hidden;
+    border-radius: 40px;
+
+    img {
+      width: 40px;
+      height: 40px;
+    }
+  }
+}

@@ -1,0 +1,72 @@
+.testimonials {
+  padding: 80px 0;
+  background: var(--cream-lite);
+
+  @include tablet {
+    padding: 60px 0;
+  }
+
+  @include mobile {
+    padding: 40px 0;
+  }
+
+  &__content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+
+    @include mobile {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+  }
+
+  &__headering {
+    width: 400px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+
+    @include mobile {
+      align-items: center;
+      text-align: center;
+    }
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  &__descr {
+    font-weight: 500;
+    font-size: 20px;
+    color: var(--gray-dark);
+  }
+
+  &__controls {
+    display: flex;
+    gap: 12px;
+  }
+
+  &__wrapper {
+    max-width: 726px;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .swiper-slide {
+    width: 351px;
+    @include tablet {
+      width: 100%;
+    }
+
+    @include mobile {
+      max-width: 450px;
+    }
+  }
+}

@@ -66,8 +66,11 @@
 .text-1 {
   font-weight: 400;
   font-size: 16px;
-  color: var(--gray-dark);
+  color: var(--black);
+}
 
-  @include mobile {
-  }
+.text-2 {
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--gray-dark);
 }

@@ -1,0 +1,45 @@
+<section class="testimonials">
+  <div class="container">
+    <div class="testimonials__content-wrapper">
+      <!-- title and control -->
+      <div class="testimonials__headering">
+        <div class="testimonials__text">
+          <h2 class="title-2">
+            Your trusted travel partner
+          </h2>
+          <p class="testimonials__descr">
+            we offer a comprehensive range of travel solutions designed to make
+            your adventures seamless and unforgettable
+          </p>
+        </div>
+        <div class="testimonials__controls">
+          <button
+            class="testimonials__btn btn btn--prev"
+            id="testimonials-btn-prev"
+          >
+            <svg class="icon icon--left-sign">
+              <use href="./img/svgsprite/sprite.symbol.svg#left-sign"></use>
+            </svg>
+          </button>
+          <button
+            class="testimonials__btn btn btn--next"
+            id="testimonials-btn-next"
+          >
+            <svg class="icon icon--right-sign">
+              <use href="./img/svgsprite/sprite.symbol.svg#right-sign"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <!-- cards -->
+      <div class="testimonials__wrapper">
+        <div class="swiper" id="testimonials-swiper">
+          <div class="swiper-wrapper">
+            @@loop('components/slide-card-review.html',
+            './../data/reviews.json')
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
