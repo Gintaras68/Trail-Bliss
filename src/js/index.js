@@ -13,3 +13,7 @@ mobileNav();
 // Initialize all Swiper's
 import swiperInit from './modules/init-swipers.js';
 swiperInit();
+
+// Initiliaze Accordion
+import accordionInit from './modules/accordion.js';
+accordionInit();

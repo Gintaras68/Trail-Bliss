@@ -1,0 +1,106 @@
+.faq {
+  padding: 80px 0;
+
+  @include tablet {
+    padding: 60px 0;
+  }
+  @include mobile {
+    padding: 40px 0;
+  }
+
+  &__title {
+    max-width: 610px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    text-align: center;
+
+    @include mobile {
+      max-width: 550px;
+      margin-bottom: 32px;
+    }
+  }
+
+  &__grid {
+    @include mobile {
+      max-width: 600px; // riboju ploti
+      margin: 0 auto; // riboju ploti
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 32px;
+    }
+  }
+
+  &__picture {
+    grid-column: span 5;
+    align-content: center;
+    border-radius: 16px;
+    overflow: hidden;
+
+    @include mobile {
+      width: 100%;
+      max-width: 700px;
+    }
+
+    img {
+      height: 100%;
+
+      @include mobile {
+        height: clamp(17.5rem, 9.688rem + 25vw, 22.5rem);
+        width: 100%;
+        object-fit: cover;
+        object-position: center 80%;
+      }
+    }
+  }
+
+  &__content {
+    grid-column: 6 / -1;
+    justify-self: right;
+    align-content: center;
+    max-width: 589px;
+    width: 100%;
+  }
+
+  // ------   accordion   -----
+  .ac {
+    margin-bottom: 12px;
+    border: none;
+    border-bottom: 1px solid #eee;
+
+    .ac-trigger {
+      font-family: var(--font-family);
+      font-weight: 500;
+      font-size: 20px;
+      color: var(--black);
+
+      &::after {
+        font-size: 28px;
+      }
+
+      @include mobile {
+        font-size: 16px;
+      }
+    }
+
+    .ac-panel {
+      font-family: var(--font-family);
+      font-weight: 400;
+      font-size: 16px;
+      color: var(--gray-dark);
+    }
+
+    .ac-panel .ac-text {
+      padding: 12px;
+      font-family: var(--font-family);
+      font-weight: 400;
+      font-size: 16px;
+      color: var(--gray-dark);
+
+      @include mobile {
+        font-weight: 500;
+        font-size: 14px;
+      }
+    }
+  }
+}

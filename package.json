@@ -46,6 +46,7 @@
 	"dependencies": {
 		"@fancyapps/fancybox": "^3.5.7",
 		"@fancyapps/ui": "^5.0.35",
+		"accordion-js": "^3.4.1",
 		"avif-webp-checker": "^1.0.0",
 		"swiper": "^11.2.10"
 	}
